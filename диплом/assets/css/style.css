@@ -1,0 +1,1024 @@
+@font-face {
+    font-family: R_Bold;
+    src: url(../fonts/Raleway-Bold.ttf);
+}
+@font-face {
+    font-family: R_Light;
+    src: url(../fonts/Raleway-Light.ttf);
+}
+@font-face {
+    font-family: R_Medium;
+    src: url(../fonts/Raleway-Medium.ttf);
+}
+@font-face {
+    font-family: R_Regular;
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+    font-family: R_SemiBold;
+    src: url(../fonts/Raleway-SemiBold.ttf);
+}
+@font-face {
+    font-family: R_Thin;
+    src: url(../fonts/Raleway-Thin.ttf);
+}
+@font-face {
+    font-family: I_Medium;
+    src: url(../fonts/Inter_18pt-Medium.ttf);
+}
+/*сброс стилей*/
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+.wrapper{
+    flex-grow: 1;
+}
+/*футер прижимаем к низу*/
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+    color: #000000;
+    font-family: Sans;
+    font-weight: 400;
+  /* Растягиваем body по высоте html */
+    display: flex;
+    flex-direction: column; /* Располагаем контент и футер вертикально */
+    min-height: 100vh; /* Занимаем минимум 100% высоты экрана */
+    margin: 0; /* Убираем стандартные отступы body */
+    background-color: #ffffff;
+}
+main {
+    flex: 1; /* Основной контент занимает все доступное пространство, выталкивая футер вниз */
+    padding: 20px;
+}
+.fixed-container{
+    max-width: 80%;
+    margin: 0 auto;
+}
+header{
+    height: 100%;
+    align-items: center;
+    width: 100%;
+}
+.header_banner{
+    background-image: url(../img/banner.svg);
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    /* определяет размер изображения на странице */
+    background-size: cover;
+    /* свойство устанавливает, будет ли повторяться изображение и каким образом */
+    background-repeat: no-repeat;
+    /* cвойство определяет, будет ли фоновое изображение прокручиваться 
+    вместе с остальной частью страницы или будет фиксированным */
+    background-attachment: fixed;
+    padding: 40px 90px;
+}
+/*Навигация*/
+.nav_block{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.company_block{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo_block{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: center;
+}
+.logotype{
+    background-image: url(../img/logotype.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 52px;
+}
+.logo_block>p{
+    opacity: 0.7;
+    text-shadow: 0px 4px 4px rgb(0, 0, 0);
+    color: #ffffff;
+    font-family: R_Regular;
+    font-size: 12px;
+}
+.phone_block{
+    text-align: center;
+}
+.phone_block>span{
+    text-shadow: 0px 1px 4px rgb(0, 0, 0);
+    color: #ffffff;
+    font-family: R_Regular;
+    font-size: 12px;
+}
+.phone_block>p{
+    text-shadow: 0px 2px 1.4px rgb(0, 0, 0);
+    color: #ffffff;
+    font-family: I_Medium;
+    font-size: 16px;
+    font-weight: 700;
+}
+.location_block{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.location_img{
+    background-image: url(../img/Location.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+}
+.location_block>p{
+    color: #000000;
+    font-family: R_Regular;
+    font-size: 20px;
+}
+@media(min-width:1000px) and (max-width:1550px){
+    .fixed-container{
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .header_banner{
+        padding: 40px 50px;
+    }
+    .logotype{
+        width: 120px;
+        height: 31px;
+    }
+    .company_block{
+        width: 60%;
+    }
+    .logo_block>p{
+        font-size: 10px;
+    }
+    .logo_block{
+        gap: 30px;
+    }
+    .phone_block>span{
+        font-size: 10px;
+    }
+    .phone_block>p{
+        font-size: 14px;
+    }
+    .location_block>p{
+        color: #000000;
+        font-family: R_Regular;
+        font-size: 18px;
+    }
+}
+@media(min-width:780px) and (max-width:999px){
+    .fixed-container{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .header_banner{
+        padding: 40px 30px;
+    }
+    .logotype{
+        width: 120px;
+        height: 31px;
+    }
+    .company_block{
+        width: 60%;
+    }
+    .logo_block>p{
+        font-size: 10px;
+    }
+    .logo_block{
+        gap: 30px;
+    }
+    .phone_block>span{
+        font-size: 10px;
+    }
+    .phone_block>p{
+        font-size: 14px;
+    }
+    .location_block>p{
+        color: #000000;
+        font-family: R_Regular;
+        font-size: 18px;
+    }
+}
+@media(min-width:600px) and (max-width:779px){
+    .fixed-container{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .header_banner{
+        padding: 40px 20px;
+    }
+    .logotype{
+        width: 100px;
+        height: 26px;
+    }
+    .company_block{
+        width: 70%;
+    }
+    .logo_block>p{
+        font-size: 8px;
+    }
+    .logo_block{
+        gap: 10px;
+    }
+    .phone_block>span{
+        font-size: 8px;
+    }
+    .phone_block>p{
+        font-size: 12px;
+    }
+    .location_block>p{
+        font-size: 12px;
+    }
+}
+@media (max-width:599px){
+    .fixed-container{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .header_banner{
+        padding: 10px 5px;
+    }
+    .logotype{
+        width: 100px;
+        height: 26px;
+    }
+    .company_block{
+        width: 70%;
+    }
+    .logo_block>p{
+        font-size: 5px;
+    }
+    .logo_block{
+        gap: 10px;
+    }
+    .phone_block>span{
+        font-size: 5px;
+    }
+    .phone_block>p{
+        font-size: 10px;
+    }
+    .location_block>p{
+        font-size: 10px;
+    }
+}
+/*Приветствие*/
+.greetings_block{
+    margin-top: 10%;
+    width: 35%;
+}
+.greetings_block>h2{
+    text-shadow: 0px 4px 15px rgb(0, 0, 0);
+    color: #ffffff;
+    font-family: R_Medium;
+    font-size: 48px;
+    font-weight: 400;
+}
+.greetings_block>h3{
+    text-shadow: 0px 4px 15px rgb(0, 0, 0);
+    color: #ffffff;
+    font-family: R_SemiBold;
+    font-size: 20px;
+    margin-top: 5%;
+    font-weight: 400;
+}
+.greetings_block>h4{
+    text-shadow: 0px 4px 15px rgb(0, 0, 0);
+    color: #ffffff;
+    font-family: R_Regular;
+    font-size: 20px;
+    font-weight: 400;
+}
+.pro_block{
+    margin-top: 5%;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+.number_block{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.number_block>p{
+    text-shadow: 0px 4px 15px rgb(0, 0, 0);
+    color: #ffffff;
+    font-family: R_Bold;
+    font-size: 48px;
+    font-weight: 400;
+}
+.number_block>span{
+    text-shadow: 0px 4px 15px rgb(0, 0, 0);
+    color: #ffffff;
+    font-family: R_Regular;
+    font-size: 15px;
+    font-weight: 100;
+    margin-top: 10px;
+}
+span>b{
+    text-shadow: 0px 4px 15px rgb(0, 0, 0);
+    color: #ffffff;
+    font-family: R_Bold;
+    font-size: 15px;
+}
+.greetings_block>button{
+    margin-top: 5%;
+    width: 45%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #9b3838, #F19515);
+    cursor: pointer;
+
+    color: #ffffff;
+    font-family: R_Bold;
+    font-size: 16px;
+}
+.greetings_block button:hover{
+    background: #333333;
+}
+.partner_block{
+    display: flex;
+    gap: 10px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+@media(min-width:1000px) and (max-width:1550px){
+    .greetings_block{
+        width: 50%;
+    }
+    .pro_block{
+        margin-top: 5%;
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+    }
+}
+@media(min-width:780px) and (max-width:999px){
+    .greetings_block{
+        width: 60%;
+    }
+    .pro_block{
+        margin-top: 5%;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+@media(min-width:600px) and (max-width:779px){
+    .greetings_block{
+        width: 60%;
+    }
+    .greetings_block>button{
+        width: 90%;
+    }
+    .greetings_block>h2{
+        font-size:35px;
+    }
+    .greetings_block>h3{
+        font-size: 15px;
+    }
+    .greetings_block>h4{
+        font-size: 15px;
+    }
+    .pro_block{
+        width: 100%;
+    }
+    .number_block>p{
+        font-size: 35px;
+    }
+    .number_block>span{
+        font-size: 10px;
+    }
+    span>b{
+        font-size: 10px;
+    }
+    .partner_block img{
+        width: 150px;
+        height: 50px;
+        background-size: cover;
+    }
+}
+@media (max-width:599px){
+    .greetings_block{
+        width: 60%;
+    }
+    .greetings_block>button{
+        width: 90%;
+    }
+    .greetings_block>h2{
+        font-size:30px;
+    }
+    .greetings_block>h3{
+        font-size: 15px;
+    }
+    .greetings_block>h4{
+        font-size: 15px;
+    }
+    .pro_block{
+        width: 100%;
+    }
+    .number_block>p{
+        font-size: 25px;
+    }
+    .number_block>span{
+        font-size: 10px;
+    }
+    span>b{
+        font-size: 10px;
+    }
+    .partner_block img{
+        width: 100px;
+        height: 50px;
+        background-size: cover;
+    }
+}
+/* Стили для модального окна */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Фиксированная позиция */
+    z-index: 1; /* Сверху всего */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Включить прокрутку, если необходимо */
+    background-color: rgba(0,0,0,0.4); /* Полупрозрачный черный фон */
+}
+/* Содержимое модального окна */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    padding: 20px;
+    margin: 10% auto;
+    border: 1px solid #888;
+    border-radius: 16px;
+    width: 60%; /* Можно настроить ширину */
+    max-width: 450px; /* Максимальная ширина */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+/* Анимация появления */
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:15%; opacity:1}
+}
+/* Кнопка закрытия (крестик) */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Стили для заднего фона при открытом окне */
+#content-wrapper.modal-open {
+    filter: blur(1px);
+}
+/* Контент окна */
+.modal_block {
+    margin: 39px 29px;
+}
+.modal_block_2 {
+    text-align: center;
+}
+.modal_img {
+    background-image: url(../img/modal_img.png);
+    width: 40px; 
+    height: 40px;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+body.modal-open {
+    overflow: hidden; /* Запрещаем прокрутку body */
+    padding-right: 17px; /* Компенсируем ширину полосы прокрутки, чтобы контент не дергался */
+}
+/* Стили для формы */
+form {
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 23px;
+    margin-left: auto;
+    margin-right: auto;
+}
+input[type="text"],
+input[type="tel"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #686868;
+    border-radius: 5px;
+    width: 283px;
+    height: 52px;
+    color: #686868;
+    font-family: R_Regular;
+    font-size: 15px;
+}
+button[type="submit"] {
+    background: linear-gradient(to right, #9b3838, #F19515);
+    cursor: pointer;
+    color: #ffffff;
+    font-family: R_Bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 52px;
+    transition: all 0.3s ease;
+}
+button[type="submit"]:hover {
+    background: linear-gradient(to right, #8a3030, #e08914);
+}
+button[type="submit"]:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+/* Скрываем форму и сообщение об успехе по умолчанию */
+#myForm, #thankYouMessage {
+    display: none;
+}
+.modal-content h2 {
+    text-align: center;
+    color: #000000;
+    font-family: R_Regular;
+    font-size: 24px;
+    font-weight: 200;
+    margin-top: 10px;
+}
+.modal-content h3 {
+    text-align: center;
+    color: #000000;
+    font-family: R_Regular;
+    font-size: 14px;
+    font-weight: 200;
+    margin-top: 10px;
+}
+.modal-content h4 {
+    text-align: center;
+    color: #000000;
+    font-family: R_Regular;
+    font-size: 16px;
+    font-weight: 200;
+    margin-top: 15px;
+}
+.modal-content h5 {
+    text-align: center;
+    color: #000000;
+    font-family: R_Regular;
+    font-size: 12px;
+    font-weight: 200;
+    margin-top: 20px;
+}
+.num_block{
+    margin-top: 13px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    text-align: center;
+    margin-left: 30px;
+}
+.num_block h4{
+    text-align: center;
+    color: #000000;
+    font-family: I_Medium;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+h4 a{
+    color: #000000;
+    font-family: I_Medium;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.phone_img{
+    align-items: center;
+    background-image: url(../img/Phone.png);
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+    margin-left: 28px;
+    margin-top: 20px;
+}
+/* Показываем форму при открытии модального окна */
+.modal-open #myForm {
+    display: flex;
+}
+/* Стили для чекбокса */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.checkbox-container input[type="checkbox"] {
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #6d6d6d;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 3px;
+}
+.checkbox-container input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 40%;         /* Центрируем по вертикали */
+  left: 50%;        /* Центрируем по горизонтали */
+  transform: translate(-50%, -50%) rotate(45deg); /* Сдвигаем и поворачиваем */
+  width: 5px;
+  height: 9px;
+  border-width: 0 2px 2px 0;
+  border-style: solid;
+  border-color: #e08914;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.checkbox-container input[type="checkbox"]:checked::before {
+  opacity: 1;
+}
+.checkbox-container label {
+  text-align: center;
+  color: #333333;
+  font-family: R_Regular;
+  font-size: 10px;
+  font-weight: 200;
+}
+.checkbox-container a {
+    color: #9b3838;
+    text-decoration: underline;
+}
+.hr_modal {
+    width: 100%;
+    background-color: #C4C4C4;
+    margin-top: 15px;
+    margin-bottom: 27px;
+}
+/* Новые стили для валидации и подсказок */
+.error-message {
+    color: #9b3838;
+    font-family: R_Regular;
+    font-size: 10px;
+    margin-top: -8px;
+    margin-bottom: 10px;
+    display: none;
+}
+.input-container {
+    position: relative;
+    margin-bottom: 5px;
+}
+.input-tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 5px;
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: R_Regular;
+    z-index: 10;
+}
+.input-container:hover .input-tooltip {
+    display: block;
+}
+/* Адаптивность */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 80%;
+        margin: 20% auto;
+    }
+    .modal_block {
+        margin: 20px;
+    }
+    form {
+        width: 100%;
+    }
+    input[type="text"],
+    input[type="tel"] {
+        width: 100%;
+    }
+}
+/*Блок О нас*/
+section{
+    margin-top: 100px;
+}
+.about_block{
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+.opis_block{
+    width: 60%;
+}
+.opis_block h1{
+    color: #000000;
+    font-family: R_Regular;
+    font-weight: 200;
+    font-size: 30px;
+}
+.opis_block h2{
+    margin-top: 24px;
+    color: #000000;
+    font-family: R_Regular;
+    font-weight: 200;
+    font-size: 16px;
+}
+.about_banner{
+    margin-top: 40px;
+    background-image: url(../img/about_banner.svg);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.req_frame{
+    background-color: #313131;
+    padding: 11px;
+    border-radius: 21px;
+    display: flex;
+    gap: 24px;
+    margin-bottom: 40px;
+    align-items: center;
+}
+.req_title h2{
+    color: #ffffff;
+    font-family: R_SemiBold;
+    font-size: 16px;
+}
+.req_title h3{
+    margin-top: 10px;
+    font-weight: 200;
+    color: #ffffff;
+    font-family: R_Regular;
+    font-size: 13px;
+}
+@media(min-width:780px) and (max-width:999px){
+    .about_block{
+        gap: 50px;
+    }
+    .opis_block h1{
+        font-size: 28px;
+    }
+    .opis_block h2{
+        font-size: 14px;
+    }
+    .about_banner{
+        height: 20vh;
+    }
+    .req_title h2{
+        font-size: 13px;
+    }
+    .req_title h3{
+        font-size: 10px;
+    }
+}
+@media(min-width:600px) and (max-width:779px){
+    .about_block{
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    .opis_block{
+        width: 100%;
+    }
+}
+@media (max-width:599px){
+    .about_banner{
+        height: 20vh;
+    }
+    .about_block{
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    .opis_block{
+        width: 100%;
+    }
+}
+/*Каталог*/
+.catalog_block h1{
+    text-align: center;
+    color: #000000;
+    font-family: R_Regular;
+    font-weight: 200;
+    font-size: 30px;
+} 
+.catalog_block h2{
+    text-align: center;
+    margin-top: 24px;
+    color: #000000;
+    font-family: R_Regular;
+    font-weight: 200;
+    font-size: 16px;
+}
+.catalog_frame {
+    display: flex;         
+    flex-wrap: wrap;       
+    justify-content: space-around; 
+    padding: 20px;
+    margin-top: 50px;
+}
+.img_container {
+    width: 300px;         
+    margin: 10px;
+    overflow: hidden;       
+    position: relative;    
+    transition: transform 0.3s ease; 
+    background-size: cover;   
+}
+.img_container:hover {
+    transform: scale(1.1);  /* Увеличиваем масштаб при наведении */
+}
+.img_container img {
+    width: 100%;            /* Заполняем контейнер изображением */
+    height: 100%;
+    display: block;
+    border-radius: 25px;     
+    background-size: cover;   
+}
+.img_container .caption {
+    font-weight: 200;
+    font-family: R_Regular;
+    position: absolute;     /* Позиционируем подпись абсолютно */
+    bottom: 0;              /* Прижимаем к нижней границе контейнера */
+    left: 0;                /* Прижимаем к левой границе контейнера */
+    width: 100%;            /* Занимаем всю ширину контейнера */
+    color: white;           /* Белый текст подписи */
+    padding: 5px;
+    margin: 10px 20px;              /* Убираем стандартные отступы у параграфа */
+    text-align: left;
+    font-size: 16px;
+}
+.full-screen-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Темный фон */
+    z-index: 1000; /* Убедитесь, что модальное окно поверх всего */
+    overflow: auto; /* Если картинка слишком большая, добавляем прокрутку */
+}
+.close-full-screen {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 3em;
+    cursor: pointer;
+}
+.full-screen-image {
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    margin: 50px auto; /* Центрируем картинку */
+}
+.full-screen-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    overflow: hidden; /* Убираем auto, чтобы центрировать, а не скроллить */
+}
+.full-screen-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрирование по вертикали */
+    align-items: center; /* Центрирование по горизонтали */
+    height: 100%; /* Занимаем всю высоту модального окна */
+}
+.full-screen-caption {
+    font-weight: 200;
+    font-family: R_Regular;
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.full-screen-image {
+    max-width: 90%;
+    max-height: 70%; /* Уменьшаем, чтобы подпись поместилась */
+    display: block;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1001;
+    transition: opacity 0.2s ease; /* Плавный переход прозрачности */
+}
+.arrow:hover {
+    opacity: 0.7; /* Полупрозрачность при наведении */
+}
+.arrow-left {
+    left: 12%;
+}
+.arrow-right {
+    right: 12%;
+}
+.close-full-screen {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 3em;
+    cursor: pointer;
+    z-index: 1001;
+    transition: opacity 0.2s ease; /* Плавный переход прозрачности */
+}
+.close-full-screen:hover {
+    opacity: 0.7; /* Полупрозрачность при наведении */
+}
+@media(min-width:600px) and (max-width:779px){
+    .img_container {
+        width: 230px;       
+    }
+}
+@media (max-width:599px){
+    .catalog_frame { 
+        padding: 5px;
+    }
+    .img_container {
+        width: 180px; 
+        height: 210px;    
+        background-size: cover;  
+        margin: 5px;
+    }
+    .img_container img {
+        width: 100%;            /* Заполняем контейнер изображением */
+        height: 100%;
+        background-size: cover;
+    }
+    .catalog_block h1{
+        font-size: 25px;
+    } 
+    .catalog_block h2{
+        font-size: 13px;
+    }
+    .img_container .caption {
+        margin: 10px 13px;              /* Убираем стандартные отступы у параграфа */
+        font-size: 12px;
+    }
+}
+/*Каталог*/
+.kviz_block h1{
+    text-align: center;
+    color: #000000;
+    font-family: R_Regular;
+    font-weight: 200;
+    font-size: 30px;
+}
+.kviz_block h2{
+    text-align: center;
+    margin-top: 24px;
+    color: #000000;
+    font-family: R_Regular;
+    font-weight: 200;
+    font-size: 16px;
+}
+/*Работы по остеклению*/
+.work_block h1{
+    text-align: center;
+    color: #000000;
+    font-family: R_Regular;
+    font-weight: 200;
+    font-size: 30px;
+}
